@@ -11,15 +11,21 @@ FiveBrains es una plataforma integral que combina 5 herramientas esenciales para
 FiveBrains/
 ├── public/              # Assets estáticos
 ├── src/
-│   ├── assets/         # Íconos e imágenes
-│   ├── components/     # Componentes reutilizables
-│   ├── layouts/        # Plantillas base
+│   ├── biblioteca/
+│   ├── calendario/
+│   ├── estadisticas/
+│   ├── hero/
+|   │   ├── assets/         # Íconos e imágenes
+|   │   ├── components/     # Componentes reutilizables
+|   │   ├── layouts/        # Plantillas base
+|   │   ├── sections/       # Secciones
+|   │   ├── metada/         # Metadata
+│   ├── organizador/
+│   ├── pomodoro/
 │   ├── pages/          # Rutas principales
-│   ├── styles/         # Estilos globales
-│   └── utils/          # Funciones auxiliares
+│   ├── styles/         # Estilos globales / Configuración de Tailwind
 ├── astro.config.mjs    # Configuración de Astro
 ├── package.json        # Dependencias
-└── tailwind.config.js  # Configuración de Tailwind
 ```
 
 ## 🚀 Instrucciones para Ejecución
