@@ -1,0 +1,19 @@
+---
+const currentYear = new Date().getFullYear();
+import { Image } from "astro:assets";
+import FiveBrains from "@hero/assets/FiveBrains.png"
+---
+
+<footer class="w-full h-full
+  bg-[linear-gradient(to_right,var(--color-gray-primary)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-gray-primary)_1px,transparent_1px)]
+  bg-[size:80px_80px]
+">
+  <div class="w-full h-full flex items-center justify-center">
+    <a href="/" class="z-50 mt-2">
+      <Image src={FiveBrains} alt="Five Brains Logo" class="size-20" />
+    </a>
+    <p>
+      © {currentYear} FiveBrains
+    </p>
+  </div>
+</footer>

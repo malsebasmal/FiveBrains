@@ -1,0 +1,36 @@
+---
+import "../../styles/index.css"
+import heroMeta from "@hero/metadata/hero"
+import Navbar from "@hero/components/Navbar.astro"
+import Footer from "@hero/components/Footer.astro"
+import 'aos/dist/aos.css'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/FiveBrains.png" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{heroMeta.title}</title>
+		<meta name="description" content={heroMeta.description} />
+		<link rel="canonical" href={heroMeta.canonical} />
+
+		<meta property="og:title" content={heroMeta.og.title} />
+		<meta property="og:description" content={heroMeta.og.description} />
+		<meta property="og:url" content={heroMeta.og.url} />
+		<meta property="og:image" content={heroMeta.og.image} />
+		<meta property="og:type" content={heroMeta.og.type} />
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+		<script>
+      import AOS from "aos";
+      AOS.init();
+    </script>
+	</body>
+</html>

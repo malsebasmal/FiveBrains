@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import '@fontsource-variable/inter';
+@plugin "@midudev/tailwind-animations";
+
+
+@theme {
+  --color-primary-blue: #2a3b8f; /* Azul Profundo */
+  --color-secondary-purple: #6a3d9a; /* Púrpura/Violeta */
+  --color-accent-green: #3cb371;   /* Verde Vibrante */
+  --color-neutral-light: #f0f0f0;  /* Gris Claro */
+  --color-text-dark: #333333;     /* Gris Oscuro */
+  --color-gray-primary: #d8d6d6;
+  --color-gray-secondary: rgba(255, 255, 255, 0.1)
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter Variable', sans-serif;
+  background-color: var(--color-neutral-light);
+  color: var(--color-text-dark)
+}
+
+.navbar-blur {
+  backdrop-filter: blur(5px);
+  background-color: var(--color-neutral-light);
+  -webkit-backdrop-filter: blur(5px);
+  transition: backdrop-filter 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in both;
+}

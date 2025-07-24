@@ -1,0 +1,18 @@
+---
+const { NavLinks } = Astro.props
+---
+
+<div class="hidden lg:flex w-fit h-full">
+  <ul class="w-full h-full flex items-center justify-center gap-5">
+    {NavLinks.map((navlink) =>
+      <li>
+        <a
+          href={navlink.href}
+          class="text-xl text-text-dark transition-all duration-200 ease-in-out hover:bg-text-dark hover:text-neutral-light rounded-2xl px-4 py-2"
+        >
+          {navlink.text}
+        </a>
+      </li>
+    )}
+  </ul>
+</div>

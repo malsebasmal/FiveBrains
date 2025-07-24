@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import FiveBrains from "@hero/assets/FiveBrains.png"
+import { fade } from "astro:transitions";
+import NavbarDesktop from "@hero/components/NavbarDesktop.astro"
+
+const NavLinks = [
+  {text: "Pomodoro", href: "/pomodoro"},
+  {text: "Organizador", href: "/organizador"},
+  {text: "Calendario", href: "/calendario"},
+  {text: "Biblioteca", href: "/biblioteca"},
+  {text: "Estadísticas", href: "/estadisticas"}
+]
+---
+
+<header class="fixed w-full h-20 z-50" id="navbar">
+  <nav class="w-full h-full flex items-center justify-between">
+    <a href="/" class="z-50">
+      <Image src={FiveBrains} alt="Five Brains Logo" class="size-20" />
+    </a>
+    <div class="w-fit lg:hidden bg-black">
+      <input type="checkbox" id="menu-toggle" class="hidden peer" aria-label="Toggle menu" />
+      <label
+        for="menu-toggle"
+        class="relative z-20 cursor-pointer flex flex-col justify-between size-20 transform transition-transform duration-500"
+      >
+      </label>
+      <ul
+        class="fixed inset-0 z-20 transform translate-x-full transition-transform duration-500 ease-in-out
+        peer-checked:translate-x-0 flex flex-col items-center justify-center gap-10"
+        transition:animate={fade({ duration: '500ms' })}
+      >
+        {NavLinks.map((navlink) => 
+          <li>
+            <a
+              href={navlink.href}
+              onclick="document.getElementById('menu-toggle').checked = false;"
+              class="text-3xl text-text-dark transition-all duration-200 ease-in-out hover:bg-accent-green hover:text-neutral-light rounded-2xl px-4 py-2"
+            >
+              {navlink.text}
+            </a>
+          </li>
+        )}
+      </ul>
+    </div>
+    <NavbarDesktop NavLinks={NavLinks} />
+  </nav>
+</header>
+
+<script is:inline>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('navbar-blur', window.scrollY > 10);
+  });
+</script>
