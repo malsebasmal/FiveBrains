@@ -1,52 +1,91 @@
-# Astro Starter Kit: Basics
+# FiveBrains - Plataforma de Herramientas Educativas
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+## 🧠 Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+FiveBrains es una plataforma integral que combina 5 herramientas esenciales para optimizar el proceso de aprendizaje. Diseñada para estudiantes que buscan maximizar su productividad académica.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🏗 Estructura del Proyecto
+FiveBrains/
+├── public/ # Assets estáticos
+├── src/
+│ ├── assets/ # Íconos e imágenes
+│ ├── components/ # Componentes reutilizables
+│ ├── layouts/ # Plantillas base
+│ ├── pages/ # Rutas principales
+│ ├── styles/ # Estilos globales
+│ └── utils/ # Funciones auxiliares
+├── astro.config.mjs # Configuración de Astro
+├── package.json # Dependencias
+└── tailwind.config.js # Configuración de Tailwind
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+text
 
-## 🚀 Project Structure
+## 🚀 Instrucciones para Ejecución
 
-Inside of your Astro project, you'll see the following folders and files:
+### Requisitos previos
+- Node.js v18+
+- pnpm
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### Instalación
+```bash
+pnpm install
+Desarrollo
+bash
+pnpm run dev
+Producción
+bash
+pnpm run build
+pnpm run preview
+📊 Integraciones de Tracking
+Google Analytics (Configurado en src/layouts/Layout.astro)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Hotjar (Para análisis de comportamiento)
 
-## 🧞 Commands
+Sentry (Monitoreo de errores)
 
-All commands are run from the root of the project, from a terminal:
+Nota: Las claves de API se gestionan mediante variables de entorno.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+🤔 Justificación de Decisiones Técnicas
+⚡ Astro
+Rendimiento: Genera sitios estáticos ultra-rápidos
 
-## 👀 Want to learn more?
+Flexibilidad: Permite usar componentes de múltiples frameworks
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+SEO: Renderizado del lado del servidor nativo
+
+🎨 Tailwind CSS v4
+Eficiencia: Utiliza el nuevo motor JIT más rápido
+
+Customización: Fácil extensión con colores y animaciones personalizadas
+
+Consistencia: Sistema de diseño unificado
+
+🛠 Otras Tecnologías Clave
+Tecnología	Propósito	Beneficio
+AOS	Animaciones scroll	Efectos al desplazar
+@midudev/animations	Efectos Tailwind	Biblioteca especializada
+🌈 Paleta de Colores
+javascript
+// tailwind.config.js
+theme: {
+  colors: {
+    'primary-blue': '#2a3b8f',
+    'secondary-purple': '#6a3d9a',
+    'accent-green': '#3cb371',
+    'neutral-light': '#f0f0f0',
+    'text-dark': '#333333'
+  }
+}
+🤝 Contribución
+Haz fork del proyecto
+
+Crea tu branch (git checkout -b feature/nueva-funcionalidad)
+
+Commit tus cambios (git commit -m 'Añade nueva funcionalidad')
+
+Push al branch (git push origin feature/nueva-funcionalidad)
+
+Abre un Pull Request
+
+📄 Licencia
+MIT © 2023 [Tu Nombre]
