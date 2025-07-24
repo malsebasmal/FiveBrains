@@ -1,9 +1,13 @@
 ---
-import "../../styles/index.css"
+import "@styles/index.css"
 import heroMeta from "@hero/metadata/hero"
 import Navbar from "@hero/components/Navbar.astro"
 import Footer from "@hero/components/Footer.astro"
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css"
+import GTM from "@analytics/GTM.astro"
+import GA4 from "@analytics/GA4.astro"
+import METAPIXEL from "@analytics/METAPIXEL.astro"
+import { initScrollTracking } from "@utils/ScrollTracking"
 ---
 
 <!doctype html>
@@ -23,14 +27,37 @@ import 'aos/dist/aos.css'
 		<meta property="og:url" content={heroMeta.og.url} />
 		<meta property="og:image" content={heroMeta.og.image} />
 		<meta property="og:type" content={heroMeta.og.type} />
+
+		<GTM />
+		<GA4 />
+		<METAPIXEL />
 	</head>
 	<body>
 		<Navbar />
 		<slot />
 		<Footer />
+
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				initScrollTracking();
+			})
+
+			document.addEventListener('astro:page-load', () => {
+				initScrollTracking();
+			})
+		</script>
+
 		<script>
-      import AOS from "aos";
+      import AOS from "aos"
       AOS.init();
     </script>
+		
+		<noscript>
+			<iframe
+				src={`https://www.googletagmanager.com/ns.html?id=${import.meta.env.PUBLIC_GTM_ID}`} 
+				height="0" width="0" 
+				style="display:none;visibility:hidden">
+			</iframe>
+  </noscript>
 	</body>
 </html>

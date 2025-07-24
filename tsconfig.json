@@ -27,6 +27,15 @@
       ],
       "@pomodoro/*": [
         "src/pomodoro/*"
+      ],
+      "@analytics/*": [
+        "src/analytics/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
       ]
     },
   }
