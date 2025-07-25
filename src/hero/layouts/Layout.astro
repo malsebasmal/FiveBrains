@@ -1,6 +1,5 @@
 ---
 import "@styles/index.css"
-import heroMeta from "@hero/metadata/hero"
 import Navbar from "@hero/components/Navbar.astro"
 import Footer from "@hero/components/Footer.astro"
 import "aos/dist/aos.css"
@@ -9,6 +8,9 @@ import GA4 from "@analytics/GA4.astro"
 import METAPIXEL from "@analytics/METAPIXEL.astro"
 import { initScrollTracking } from "@utils/ScrollTracking"
 import { ClientRouter } from "astro:transitions"
+import defaultMeta from "@hero/metadata/metadata"
+
+const { meta = defaultMeta } = Astro.props
 ---
 
 <!doctype html>
@@ -19,15 +21,15 @@ import { ClientRouter } from "astro:transitions"
 		<link rel="icon" type="image/svg+xml" href="/FiveBrains.png" />
 		<meta name="generator" content={Astro.generator} />
 
-		<title>{heroMeta.title}</title>
-		<meta name="description" content={heroMeta.description} />
-		<link rel="canonical" href={heroMeta.canonical} />
+		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<link rel="canonical" href={meta.canonical} />
 
-		<meta property="og:title" content={heroMeta.og.title} />
-		<meta property="og:description" content={heroMeta.og.description} />
-		<meta property="og:url" content={heroMeta.og.url} />
-		<meta property="og:image" content={heroMeta.og.image} />
-		<meta property="og:type" content={heroMeta.og.type} />
+		<meta property="og:title" content={meta.og.title} />
+		<meta property="og:description" content={meta.og.description} />
+		<meta property="og:url" content={meta.og.url} />
+		<meta property="og:image" content={meta.og.image} />
+		<meta property="og:type" content={meta.og.type} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 

@@ -1,9 +1,10 @@
 ---
+import headData from "@pomodoro/metadata/metadata"
 import Layout from "@hero/layouts/Layout.astro"
 import Title from "@pomodoro/sections/Title.astro"
 ---
 
-<Layout>
+<Layout meta={headData}>
 	<main class="w-full h-full flex flex-col items-center justify-center">
     <Title />
   </main>
