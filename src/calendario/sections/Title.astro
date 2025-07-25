@@ -1,0 +1,31 @@
+---
+import Calendar from "@calendario/assets/Calendar.gif"
+import CalendarAstro from "@hero/assets/Calendar.astro"
+---
+
+<section
+  class="
+    w-full h-dvh
+    bg-[linear-gradient(to_right,var(--color-gray-primary)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-gray-primary)_1px,transparent_1px)]
+    bg-[size:80px_80px]
+  ">
+  <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500" class="w-full h-full flex flex-col-reverse lg:flex-row items-center justify-center p-8 gap-4 lg:gap-10">
+    <img src={Calendar.src} alt="Clock" class="w-50 lg:w-60" />
+    <div class="w-full lg:w-fit flex flex-col items-center justify-center text-center gap-4">
+      <h4 class="text-6xl lg:text-8xl flex items-center justify-center gap-4 animate-shake">
+        Calendario <CalendarAstro class="size-10 lg:size-20 mt-3" /> 
+      </h4>
+      <div class="lg:w-2xl text-center text-2xl lg:text-4xl">
+        <p>
+          Planifica tu semana con claridad.
+        </p>
+        <p>
+          Agrega clases, exámenes y entregas para tener siempre el control de tu tiempo
+        </p>
+        <button class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-secondary-purple focus:bg-primary-blue hover:bg-primary-blue transition-all duration-200 ease-in-out hover:animate-pulsing">
+          Potencia tus 5 cerebros! 
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

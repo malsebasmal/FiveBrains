@@ -8,6 +8,7 @@ import GTM from "@analytics/GTM.astro"
 import GA4 from "@analytics/GA4.astro"
 import METAPIXEL from "@analytics/METAPIXEL.astro"
 import { initScrollTracking } from "@utils/ScrollTracking"
+import { ClientRouter } from "astro:transitions"
 ---
 
 <!doctype html>
@@ -29,6 +30,8 @@ import { initScrollTracking } from "@utils/ScrollTracking"
 		<meta property="og:type" content={heroMeta.og.type} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<ClientRouter/>
 
 		<GTM />
 		<GA4 />

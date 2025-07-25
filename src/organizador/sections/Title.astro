@@ -1,0 +1,31 @@
+---
+import Checklist from "@organizador/assets/Checklist.gif"
+import Task from "@hero/assets/Task.astro"
+---
+
+<section
+  class="
+    w-full h-dvh
+    bg-[linear-gradient(to_right,var(--color-gray-primary)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-gray-primary)_1px,transparent_1px)]
+    bg-[size:80px_80px]
+  ">
+  <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500" class="w-full h-full flex flex-col-reverse lg:flex-row-reverse items-center justify-center p-8 gap-4 lg:gap-10">
+    <img src={Checklist.src} alt="Checklist" class="w-50 lg:w-60 -mt-4 lg:mt-0" />
+    <div class="w-full lg:w-fit flex flex-col items-center justify-center text-center gap-4">
+      <h4 class="text-5xl lg:text-8xl flex items-center justify-center gap-4 animate-shake">
+        Organizador <Task class="size-10 lg:size-20 mt-3" /> 
+      </h4>
+      <div class="lg:w-2xl text-center text-2xl lg:text-4xl">
+        <p>
+          Organiza tus pendientes por materia, prioridad o fecha.
+        </p>
+        <p>
+          Arrastra tareas, márcalas como completas y nunca más te olvides de una entrega
+        </p>
+        <button class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-accent-green focus:bg-secondary-purple hover:bg-secondary-purple transition-all duration-200 ease-in-out hover:animate-sway">
+          Potencia tus 5 cerebros! 
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
