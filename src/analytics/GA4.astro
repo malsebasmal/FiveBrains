@@ -6,9 +6,6 @@ const GA4ID = import.meta.env.PUBLIC_GA4_ID
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '${GA4ID}');
+  gtag('config', '{GA4ID}');
 </script>
-<script 
-  src={`https://www.googletagmanager.com/gtag/js?id=${GA4ID}`}
-  defer
-></script>
+<script src={`https://www.googletagmanager.com/gtag/js?id=${GA4ID}`} defer></script>

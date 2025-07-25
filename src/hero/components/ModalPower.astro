@@ -62,31 +62,33 @@ import X from "@hero/assets/X.astro"
 </dialog>
 
 <script is:inline>
-  const form = document.getElementById('waitlist-form');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const nameError = document.getElementById('name-error');
-  const emailError = document.getElementById('email-error');
+  (() => {
+    const form = document.getElementById('waitlist-form')
+    const nameInput = document.getElementById('name')
+    const emailInput = document.getElementById('email')
+    const nameError = document.getElementById('name-error')
+    const emailError = document.getElementById('email-error')
 
-  form.addEventListener('submit', (e) => {
-    let valid = true;
+    form?.addEventListener('submit', (e) => {
+      let valid = true
 
-    if (!nameInput.value.trim()) {
-      nameError.classList.remove('hidden');
-      valid = false;
-    } else {
-      nameError.classList.add('hidden');
-    }
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden')
+        valid = false
+      } else {
+        nameError.classList.add('hidden')
+      }
 
-    if (!emailInput.value.trim()) {
-      emailError.classList.remove('hidden');
-      valid = false;
-    } else {
-      emailError.classList.add('hidden');
-    }
+      if (!emailInput.value.trim()) {
+        emailError.classList.remove('hidden')
+        valid = false
+      } else {
+        emailError.classList.add('hidden')
+      }
 
-    if (!valid) {
-      e.preventDefault();
-    }
-  });
+      if (!valid) {
+        e.preventDefault()
+      }
+    })
+  })()
 </script>

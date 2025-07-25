@@ -1,5 +1,5 @@
 
-import { initScrollTracking } from "public/utils/ScrollTracking.js";
+import { initScrollTracking } from "/utils/ScrollTracking.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   initScrollTracking();
