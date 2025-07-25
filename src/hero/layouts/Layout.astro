@@ -6,7 +6,6 @@ import "aos/dist/aos.css"
 import GTM from "@analytics/GTM.astro"
 import GA4 from "@analytics/GA4.astro"
 import METAPIXEL from "@analytics/METAPIXEL.astro"
-import { initScrollTracking } from "@utils/ScrollTracking"
 import { ClientRouter } from "astro:transitions"
 import defaultMeta from "@hero/metadata/metadata"
 
@@ -44,15 +43,7 @@ const { meta = defaultMeta } = Astro.props
 		<slot />
 		<Footer />
 
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', () => {
-				initScrollTracking();
-			})
-
-			document.addEventListener('astro:page-load', () => {
-				initScrollTracking();
-			})
-		</script>
+		<script type="module" src="/scripts/initScrollTracking.js"></script>
 
 		<script>
       import AOS from "aos"

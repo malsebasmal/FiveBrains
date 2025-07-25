@@ -32,7 +32,7 @@
         "src/analytics/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "public/utils/*"
       ],
       "@styles/*": [
         "src/styles/*"
