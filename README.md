@@ -84,6 +84,7 @@ pnpm run preview
 |------------------------|-------------------------|-----------------------------|
 | AOS                    | Animaciones al hacer scroll | Mejora experiencia visual  |
 | @midudev/animations    | Efectos para Tailwind   | Biblioteca especializada     |
+| daisyUI    | Librería UI   | Librería de componentes UI     |
 
 ## 🌈 Paleta de Colores
 
