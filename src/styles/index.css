@@ -25,7 +25,7 @@ body {
 
 .navbar-blur {
   backdrop-filter: blur(5px);
-  background-color: var(--color-neutral-light);
+  background-color: transparent;
   -webkit-backdrop-filter: blur(5px);
   transition: backdrop-filter 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
