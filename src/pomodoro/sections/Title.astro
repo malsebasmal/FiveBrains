@@ -1,6 +1,7 @@
 ---
 import Clock from "@pomodoro/assets/Clock.gif"
 import Pomodoro from "@hero/assets/Pomodoro.astro"
+import ModalPower from "@hero/components/ModalPower.astro"
 ---
 
 <section
@@ -22,9 +23,10 @@ import Pomodoro from "@hero/assets/Pomodoro.astro"
         <p>
           Mantén la concentración sin agotarte y mejora tu ritmo de estudio
         </p>
-        <button class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-primary-blue focus:bg-accent-green hover:bg-accent-green transition-all duration-200 ease-in-out hover:animate-wobble">
+        <button onclick="document.getElementById('waitlist_modal').showModal()" class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-primary-blue focus:bg-accent-green hover:bg-accent-green transition-all duration-200 ease-in-out hover:animate-wobble">
           Potencia tus 5 cerebros! 
         </button>
+        <ModalPower />
       </div>
     </div>
   </div>

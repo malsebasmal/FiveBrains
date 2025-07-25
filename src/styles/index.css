@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import '@fontsource-variable/inter';
 @plugin "@midudev/tailwind-animations";
-
+@plugin "daisyui";
 
 @theme {
   --color-primary-blue: #2a3b8f; /* Azul Profundo */
@@ -25,7 +25,7 @@ body {
 
 .navbar-blur {
   backdrop-filter: blur(5px);
-  background-color: transparent;
+  background-color: var(--color-neutral-light);
   -webkit-backdrop-filter: blur(5px);
   transition: backdrop-filter 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }

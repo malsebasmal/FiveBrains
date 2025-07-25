@@ -1,6 +1,7 @@
 ---
 import Checklist from "@organizador/assets/Checklist.gif"
 import Task from "@hero/assets/Task.astro"
+import ModalPower from "@hero/components/ModalPower.astro"
 ---
 
 <section
@@ -22,9 +23,10 @@ import Task from "@hero/assets/Task.astro"
         <p>
           Arrastra tareas, márcalas como completas y nunca más te olvides de una entrega
         </p>
-        <button class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-accent-green focus:bg-secondary-purple hover:bg-secondary-purple transition-all duration-200 ease-in-out hover:animate-sway">
+        <button onclick="document.getElementById('waitlist_modal').showModal()" class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-accent-green focus:bg-secondary-purple hover:bg-secondary-purple transition-all duration-200 ease-in-out hover:animate-sway">
           Potencia tus 5 cerebros! 
         </button>
+        <ModalPower />
       </div>
     </div>
   </div>

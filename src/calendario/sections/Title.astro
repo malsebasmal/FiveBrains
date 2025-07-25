@@ -1,6 +1,7 @@
 ---
 import Calendar from "@calendario/assets/Calendar.gif"
 import CalendarAstro from "@hero/assets/Calendar.astro"
+import ModalPower from "@hero/components/ModalPower.astro"
 ---
 
 <section
@@ -22,9 +23,10 @@ import CalendarAstro from "@hero/assets/Calendar.astro"
         <p>
           Agrega clases, exámenes y entregas para tener siempre el control de tu tiempo
         </p>
-        <button class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-secondary-purple focus:bg-primary-blue hover:bg-primary-blue transition-all duration-200 ease-in-out hover:animate-pulsing">
+        <button onclick="document.getElementById('waitlist_modal').showModal()" class="w-fit mt-4 lg:mt-8 cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl text-white bg-secondary-purple focus:bg-primary-blue hover:bg-primary-blue transition-all duration-200 ease-in-out hover:animate-pulsing">
           Potencia tus 5 cerebros! 
         </button>
+        <ModalPower />
       </div>
     </div>
   </div>

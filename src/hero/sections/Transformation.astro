@@ -1,5 +1,6 @@
 ---
 import Advantage from "@hero/assets/Advantage.gif"
+import ModalPower from "@hero/components/ModalPower.astro"
 ---
 
 <section class="w-full h-full bg-secondary-purple text-white flex flex-col lg:gap-8 items-center justify-center p-8 lg:py-20
@@ -10,9 +11,10 @@ import Advantage from "@hero/assets/Advantage.gif"
     <h3 id="que-es-fivebrains" class="text-3xl text-center lg:text-5xl font-semibold">
       Únete a la revolución del estudio inteligente
     </h3>
-    <button class="w-fit h-full cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl bg-accent-green focus:bg-primary-blue hover:bg-primary-blue transition-all duration-200 ease-in-out hover:animate-jelly">
+    <button onclick="document.getElementById('waitlist_modal').showModal()" class="w-fit h-full cursor-pointer font-medium p-4 lg:p-6 text-lg lg:text-xl rounded-2xl bg-accent-green focus:bg-primary-blue hover:bg-primary-blue transition-all duration-200 ease-in-out hover:animate-jelly">
       Potencia tus 5 cerebros! 
     </button>
+    <ModalPower />
     <div>
       <img src={Advantage.src} alt="Brain">
     </div>
