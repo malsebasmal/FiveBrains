@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.1",
@@ -18,5 +19,9 @@
     "daisyui": "^5.0.46",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
   }
 }
